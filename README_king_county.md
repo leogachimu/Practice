@@ -120,186 +120,130 @@ I used various visualization methods such as bar plots, histograms, scatter plot
 ### Machine Learning Modelling
 I built different machine learning models and evaluated their performance to pick the best based on performance scores and whether it was fitting the data appropriately (without underfitting or overfitting).  
 
-
 ## THE FINDINGS
-### 1. The relationship between weather season and sales performance
+### 1. Relationship Between Pump Functionality and Continuous Variables
 
-![Distribution of sales volume by month](https://github.com/leogachimu/dsc-phase-2-project/assets/122081776/68d8ca9e-0d1e-4ae6-b955-002a5aeb2ef0)
+![density_of_target_class_vs_continuous_features](https://github.com/leogachimu/Practice/assets/122081776/4b48c481-969e-4336-9e7a-a6c4ca6e965a)
 
-My analysis reveals that there is a significant variation in the volume of sales across the months in year.<br>
-i.) January and February starts off the year with low sales of around **1,000 houses per month**.<br>
-ii.) The volume starts to rise in March, where it is about **1,500 houses**.<br>
-iii.) From April to July, the volume is about **2,000 houses per month**.<br>
-iv.) May has the highest volume at above **2,000 houses**.<br>
-v.) The volume starts to decline to around **1,700 houses** in August and **1,500 houses** in September.<br>
-vi.) There is a slight increase in October, but the price then drops through November and December.
+i.) For the total static head feature (amount_tsh), waterpoints with zero static head have the highest density of pumps overall. Also, among the three pump classes at this point, non-functional pumps have the highest density followed by functional pumps. Functional-needs-repair pumps are the least. Functional-needs-repair pumps are the least. However, the dataset has a high number (59.2%) of pumps with zero static head and there is no information about the high occurrence.<br>
 
-![Distribution of mean sale price by month](https://github.com/leogachimu/dsc-phase-2-project/assets/122081776/a311d00d-af9e-42e3-a0b0-b0fe9fdee95b)
+ii.) For GPS height, functional and non-functional pumps are fairly equal when the GPS height is zero, at which point the functional-needs-repair pumps are much fewer.<br>
 
-The distribution of mean sale prices over the months in a year also shows that there are significant differences.<br>
-i.) The months of January and February have lower mean prices of between **$500,000** and **$525,000**.<br>
-ii.) The mean price from March to August is around **$550,000** or higher. April has the highest mean price of above **$550,000**.<br>
-iii.) The mean price drops slightly in August and September, rises slightly in October, and then drops again in November and December.<br>
-### 2. Relationship between house grade and sales performance
+iii.) For the population features, waterpoints located in areas with zero population have the highest density of non-functional pumps. This is followed by functional pumps while functional-needs-repair pumps are the least. However, there is no information about whether the wells have been abandoned or the population has relocated.<br>
 
-![Distribution of sales volume by grade](https://github.com/leogachimu/dsc-phase-2-project/assets/122081776/40bf1241-f1d0-4638-86dd-b8c312847343)
+iv.) The density of functional pumps is higher among the newest pumps while non-functional pumps are higher among the older pumps, from around 1965 to 1990.<br>
 
-My analysis of sales volume by grade appears to follow a normal distribution with grade 7 having the peak sales volume of about **8,000 houses**. The lower grades of 3, and 4, and the higher grades of 11 and 12 each have sales volumes around **100** or fewer.
+**Geographical distribution of pump condition**
 
-![Distribution of mean sale price by grade](https://github.com/leogachimu/dsc-phase-2-project/assets/122081776/8f714ddd-5634-42d1-8489-a7ea486936e5)
+![distribution_of_filtered_wells_in_tz](https://github.com/leogachimu/Practice/assets/122081776/42bd3e96-082d-4e7a-9590-f852ceafcffc)
 
-My analysis has also shown that there is a significant difference in mean sale price among different house grades. Between grade 3 and 8, the mean price is between **$250,000** to **$500,000**. From grade 9 to 13, the mean sale price rises from around **$600,000** to over **$3,500,000**.
+From the geographical map of pumps, we observe the following:
 
-### 3. The relationship between number of bedrooms and sales performance
-On all social media platforms and social environments, almost everyone wants to know the number of bedrooms when they're scouting for houses. I, therefore, saw the need to find out if there is a relationship between the number of bedrooms and sales perfomance.
+i.) There is a higher density of functional pumps in the Northern regions of Mwanza and Shinyanga, as well as the Southern region of Njombe.<br>
+ii.) There is a higher density of functional-needs-repair pumps in the Northern regions of Bukoba and Arusha, as well as the Western region of Kigoma.<br>
+iii.) There is a higher density of non-functional pumps in the Central region of Dodoma and the South West region of Mtwara.<br>
 
-My analysis of the relationship between sales and number of bedrooms shows that buyers and sellers have two major factors to consider:<br>
-i.) The sales volume, which follows a normal distribution with a peak volume of **8,000 houses** at the median number of 3 bedrooms.<br>
+**total_static_head vs. pump condition**
 
-![Distribution of sales volume by number of bedrooms](https://github.com/leogachimu/dsc-phase-2-project/assets/122081776/312e4db1-87b3-4928-8b84-3a706b0c7af7)
+![Box_Plot_of_Total_Static_Head_by_Pump_Condition](https://github.com/leogachimu/Practice/assets/122081776/bb4daa84-78b0-47bf-98ad-5db7e8ba27d6)
 
-ii.) The distribution of mean sale price by number of bedrooms, which shows that the peak mean price is **$1,200,000** at 8 bedrooms. For houses with 3 bedrooms, the mean price is only **$465,000**.<br>
+From the box plot of total_static_head vs. pump condition, we can see that the pumps having tsh above approx.125,000 are all functional. Therefore, the higher the tsh the higher the probabilty of a pump being functional.
 
-![Distribution of mean sale price by number of bedrooms](https://github.com/leogachimu/dsc-phase-2-project/assets/122081776/84a74027-035d-44b8-8909-a0af704e18d3)
+### 2. Relationship Between Pump Functionality and Categorical Variables
 
-### 4. The set of variables has the highest influence on the sale price of a house
+![distribution_of_categorical_features1](https://github.com/leogachimu/Practice/assets/122081776/3e26580e-d44d-48fc-9c32-406f06b51165)
 
-![Regression Plots of the Best Fitting Multiple Linear Regression Model](https://github.com/leogachimu/dsc-phase-2-project/assets/122081776/52e8011b-2116-44f9-a042-52a17d4f7f85)
+From the different visualizations of categorical variables, we notice that some classes of categories are more popular than others. For example, Iringa and Kilimanjaro regions have the highest number of pumps. The never-pay payment scheme is most popular and over 40,000 out of 59,400 wells have soft water quality.
 
-From my regression modelling, I found out that the five influential factors affecting house sale volume and mean sale price are:
+![distribution_of_target_class_vs_categorical_features](https://github.com/leogachimu/Practice/assets/122081776/1e2f2e31-b88a-4c73-befc-d9b4e5637991)
 
-i.) The size of the interior living area in square feet<br>
-ii.) The grade of the house, which is a classification by construction quality<br>
-iii.) The square footage of the house excluding the basement<br>
-iv.) The average size of interior living space for the closest 15 houses, in square feet<br>
-v.) The number of bathrooms<br>
+From the distribution of pump functionality class for each class of a categorical variable, we notice that the functional pumps are more frequent than functional-needs-repair and non-functional pumps. 
 
-### 5. Distribution of house prices and house sale volumes around the county
-I created a heatmap that shows that the top 20 locations in count of sales are in the north western region of Seattle.
+A notable deviation from this trend is the never-pay class of the payment-type category, where non-functional pumps are more than the other classes of pumps.
 
-![Heatmap for the Distribution of Top House Sale Volumes in King County](https://github.com/leogachimu/dsc-phase-2-project/assets/122081776/d4da93d0-f81f-45b8-a39a-be310f0f4682)
+### 3. Predictive Modelling Results
+From the predictive section, I conclude that it's possible to correctly predict the condition of a pump given the data features from the Ministry of Water in Tanzania.
 
-I also created a heatmap that reveals that all the top 10 mean sale prices came from the north western region of Seattle.
+The XGBoost model is the best for predicting whether a pump is functional, functional-needs-repair or non-functional given the different data features provided. It has an **accuracy score of 0.800 (80%)**, an **F1-score of 0.788**, a **precision of 0.797**, and a **recall of 0.800**. Even though the Random Forest model has slightly higher scores, the train scores show that it is overfitting the data while the XGBoost is a good fit (not underfitting or overfitting).
 
-![Heatmap for the Distribution of Top Mean House Sale Price in King County](https://github.com/leogachimu/dsc-phase-2-project/assets/122081776/a5064611-c13a-4a46-a3d7-7eca0bf62215)
+**Classification Report of XGBoost Model:**
+                            precision    recall  f1-score   support
+             functional       0.78      0.91      0.84      5465
+functional needs repair       0.62      0.21      0.31       662
+         non functional       0.85      0.74      0.79      3920
 
-This trend is to be expected, since Seattle is the most populous and most advanced city in King County and in the Washington State in general. Therefore, the number of homes on sale, the demand for houses, and the ability to purchase more expensive homes is to be found in Seattle.
+               accuracy                           0.80     10047
+              macro avg       0.75      0.62      0.65     10047
+           weighted avg       0.80      0.80      0.79     10047
+**Confusion Matrix**
 
-### 6. 3D Scatter Plots
-3D scatter plots of different combinations of the most influential predictor variables show a high correlation among them.
+![Confusion_matrix_for_xgbboost](https://github.com/leogachimu/Practice/assets/122081776/1373ca61-7030-41bf-99c6-a9de7bf15920)
 
-![3D Scatter Plots](https://github.com/leogachimu/dsc-phase-2-project/assets/122081776/3f87234b-5bcb-4dd3-b90d-e2ccbb047aed)
+To save on the cost of attending to pumps whose condition has been erroneously predicted, or ignoring faulty pumps predicted to be in good condition, I started with the intention of minimizing both False Positives (high precision) and False Negatives (high recall). The XGBoost model has high scores for both precision and recall, at 0.797 and 0.8 respectively.
 
-3D scatter plot 1 shows that at different grades, the sale price increases with an increase in both sqft_living and sqft_above. However, the count of sales is denser between grade 6 and 8, and at the lower levels of both sqft_living and sqft_above.
+However, the XGBoost model has high prediction scores for both functional and non-functional pump conditions but low scores for the functional-needs-repair condition. I attribute this to the low count of the functional-needs-repair condition, which makes up only 4.42% of the dataset.
 
-3D scatter plot 2 shows that the sale price increases with an increase in sqft_living, sqft_above, and number of bathrooms. However, the count of sales is denser at the lower levels of all the three variables.
+### 4. ROC-AUC Analysis
 
-3D scatter plot 3 shows that different grades, the sale price increases with an increase in both sqft_living and sqft_living15. However, the count of sales is denser between grade 5 and 8, and at the lower levels of both sqft_living and sqft_living15.
+![ROC_curves_for_machine_learning_models](https://github.com/leogachimu/Practice/assets/122081776/b62a6e53-6bc0-44f5-8688-c588a544aab6)
 
-3D scatter plot 4 shows that different grades, the sale price increases with an increase in both the number of bathrooms and sqft_living. However, the count of sales is denser between grade 6 and 8, and also between 3 and 5 bedrooms at the lower levels of sqft_living.
+The XGBoost model is the best in terms of performance metrics and goodness of fit, and ROC curves show that it has the best combined AUC scores for the three classes of outcome.
+
+### 5. Feature Importances
+
+![Top_20_Most_Important_Features_in_Final_XGBoost_Model](https://github.com/leogachimu/Practice/assets/122081776/ef94553a-a1aa-443d-90f6-b433c164e928)
+
+Some of the top features influencing a prediction include:<br>
+i.) quantity-group (the quantity of water)<br>
+ii.) The water point type<br>
+iii.) The extraction type class<br>
+iv.) The basin<br>
+v.) scheme management<br>
+vi.) The installer<br>
+vii.) payment type<br>
 
 ## CONCLUSION
-### The Set of Variables with the Highest Effect on Sales and Mean Sale Price
+i.) Waterpoints with zero static head have the highest density of non-functional pumps but I could not determine the reason for this fact.<br>
+ii.) Pumps having total static head (tsh) above approx. 125,000 are all functional. This could be an indicator that the higher the tsh, the higher the likelihood of a pump lasting longer.<br>
+iii.) Waterpoints located in areas with zero population have the highest density of non-functional pumps. However, there is no information about whether the wells have been abandoned or the population has relocated.<br>
+iv.) The density of functional pumps is higher among the newest pumps while non-functional pumps are higher among the older pumps, from around **1965 to 1990.**<br>
+v.) From the geographical map of pumps, we observe the following:<br>
+    a.) There is a higher density of functional pumps in the Northern regions of Mwanza and Shinyanga, as well as the Southern region of Njombe.<br>
+    b.) There is a higher density of functional-needs-repair pumps in the Northern regions of Bukoba and Arusha, as well as the Western region of Kigoma.
+    c.) There is a higher density of non-functional pumps in the Central region of Dodoma and the South West region of Mtwara.<br>
+vi.) Some classes of categorical variables are more frequent than others. For example, Iringa and Kilimanjaro regions have the highest number of pumps. The never-pay payment scheme is the most popular and over 40,000 out of 59,400 wells have soft water quality.<br>
+vii.) Functional pumps are the most frequent among almost all classes of predictor but a notable deviation from this trend is the **never-pay class** of the payment-type category, where non-functional pumps are more than the other classes of pumps.<br>
+viii.) From the predictive section, I conclude that it's possible to correctly **predict at least 80% accuracy**, the condition of a pump given the data features from the Ministry of Water in Tanzania.<br>
 
-From my regression modelling, I found out that the five influential factors affecting house sale volume and mean sale price are:<br>
-i.) The size of the interior living area in square feet<br>
-ii.) The grade of the house, which is a classification by construction quality<br>
-iii.) The square footage of the house excluding the basement<br>
-iv.) The average size of interior living space for the closest 15 houses, in square feet<br>
-v.) The number of bathrooms<br>
+The XGBoost model is the best for predicting whether a pump is functional, functional-needs-repair or non-functional given the different data features provided. It has an **accuracy score of 0.800 (80%)**, an **F1-score of 0.788**, a **precision of 0.797**, and a **recall of 0.800**. Even though the Random Forest model has slightly higher scores, the train scores show that it is overfitting the data while the XGBoost is a good fit (not underfitting or overfitting).
 
-### Seasonal Variation of Sales Performance
+## RECOMMENDATIONS TO THE GOVERNMENT OF TANZANIA
+1. I advise the Goverment of Tanzania to apply my final model in predicting the condition of well pumps across Tanzania. It will help them to correctly predict the actual condition of each pump at at least 80% success rate.
 
-The northwestern States are characterized by sub-zero degree Winter months, which leads to more people looking to sell their houses so that they can move to warmer regions in the south. There are also fewer potential buyers during the colder months.
+2. The government needs to give more attention to the Northern regions of Bukoba and Arusha where there is the highest density of functional-needs-repair pumps, as well as the regions of Dodoma and Mtwara, where there is the highest density of non-functional pumps.
 
-My analysis reveals that there is a variation in the volume of sales across the months in year.<br>
+3. The government will need to find out more about why there are more non-functional pumps among the pumps recorded as having zero static head and in areas recorded as having zero population.
 
-i.) January and February starts off the year with low sales of around **1,000 houses per month**.<br>
-ii.) The volume starts to rise in March, where it is about **1,500 houses**.<br>
-iii.) From April to July, the volume is about **2,000 houses per month**.<br>
-iv.) May has the highest volume at above **2,000 houses**.<br>
-v.) The volume starts to decline to around **1,700 houses** in August and **1,500 houses** in September.<br>
-vi.) There is a slight increase in October, but the price then drops through November and December.
-
-This trend coincides with the seasons in the USA. Winter runs from December to Mid-March, and the Northwestern States being colder, people tend to move to warmer southern states or countries.<br>
-
-Spring runs from mid-March to mid-June, while Summer runs from June to August. During this period, a significant number of people may move back to the northwestern states, thus raising the demand for houses.<br>
-
-Finally, Fall, which runs from September to December, heralds the start of another cold season, at which people start moving out of the northwestern states.<br>
-
-The distribution of mean sale prices over the months in a year also shows that there are significant differences.<br>
-i.) The months of January and February have lower mean prices of between **$500,000** and **$525,000**.<br>
-ii.) The mean price from March to August is around **$550,000** or higher. April has the highest mean price of above **$550,000**.<br>
-iii.) The mean price drops slightly in August and September, rises slightly in October, and then drops again in November and December.<br>
-
-### Grade
-
-Grade is a classification by construction quality which refers to the types of materials used and the quality of workmanship. It is regulated by the King County Local government, and therefore, this is an important factor to anyone looking to buy a house.
-
-My analysis of sales volume by grade appears to follow a normal distribution with grade 7 having the peak sales volume of about 8,000 houses. The lower grades of 3, and 4, and the higher grades of 11 and 12 each have sales volumes around 100 or fewer.
-
-My analysis has also shown that there is a significant difference in mean sale price among different house grades. Between grade 3 and 8, the mean price is between **$250,000** to **$500,000**. From grade 9 to 13, the mean sale price rises from around **$600,000** to over **$3,500,000**.
-
-### Number of Bedrooms
-
-On all social media platforms and social environments, almost everyone wants to know the number of bedrooms when they're scouting for houses. I, therefore, saw the need to find out if there is a relationship between the number of bedrooms and sales perfomance.
-
-My analysis of the relationship between sales and number of bedrooms shows that buyers and sellers have two major factors to consider:
-
-i.) The sales volume, which follows a normal distribution with a peak volume of 8,000 houses at the median number of 3 bedrooms.<br>
-ii.) The distribution of mean sale price by number of bedrooms, which shows that the peak mean price is **$1,200,000** at 8 bedrooms. For houses with 3 bedrooms, the mean price is only **$465,000**.
-
-### Distribution of Sales and Mean Sale Prices by Location
-
-The heatmap showing the top 20 in count of sales shows that the north western region of Seattle has the most dense concentration of zipcodes with top 20 in sales volume.
-
-The heatmap showing the locations with top 10 mean prices also reveals that all the top 10 mean sale prices came from the north western region of Seattle.
-
-This trend is to be expected, since Seattle is the most populous and most advanced city in King County and in the Washington State in general. Therefore, the number of homes on sale, the demand for houses, and the ability to purchase more expensive homes is to be found in Seattle.
-
-## RECOMMENDATIONS TO TEAM HOWLETT REALTORS
-For a home buyer to realize the best value their home buyer and a seller or for Team Howlett Reators to fetch optimal returns, they should give higher consideration to these five factors:<br>
-i.) The size of the interior living area in square feet<br>
-ii.) The grade of the house, which is a classification by construction quality<br>
-iii.) The square footage of the house excluding the basement<br>
-iv.) The average size of interior living space for the closest 15 houses, in square feet<br>
-v.) The number of bathrooms
-
-I would advise a buyer to consider buying a house in the offpeak months of January, February, September, October, November, or December, since this is the period they're likely to get a significant discount.
-To a seller, I would advise them to consider selling in the peak months from March to August, since this is the period when the demand is high and they're also likely to sell at a significant margin compared to the offpeak months.
-
-There is a significant difference in mean sale price between different house grades. Therefore, if a buyer wants a low-budget house of around $500,000 or less, I would advise them to consider houses between grade 3 and 8. If they have the budget for a more expensive house above $500,000, I would advise them to go for between grade 9 and 13.
-For a seller wishing to fetch the highest price in the market, they should go for grade 13 houses. If they want to sell low-priced houses quickly, then they should sell houses with between grades 3 and 8.
-
-If a buyer wants a low-budget house (between $300,000 and $700,000), I would advise them to consider houses with between 1 and 4 bedrooms. If they have the budget for a more expensive house above $800,000, I would advise them to go for between 5 and 10 bedrooms.
-For a seller wishing to fetch the highest price in the market, they should go for 8-bedroom houses. If they want to sell low-priced houses quickly, then they should sell houses with between 1 and 4 bedrooms.
-
-If a buyer wants a wider variety of high-grade homes on sale, they should search in Seattle region. However, this is also the region with the highest mean sale price.
-Therefore, overall the highest real estate business is to be found in Seattle and the northwestern region of the King County in general.
+4. The government will need to implement and operationalize a payment scheme for the water points, having observed that the sites where people never pay for water had the highest frequency of non-functional pumps.
 
 ## STUDY LIMITATIONS
+1. About half of the dataset has zero population, gps height, total static head, and construction year values and there is no information about why this is the case. This has only resulted in unresolved dilemmas. For example, wells with zero population have the highest frequency of non-functional pumps, but there is no information about whether the wells have been abandoned or the population has relocated. Therefore, I cannot accurately answer questions such as the relationship between population or construction year and a pump's functionality.
 
-My best multiple linear regression model achieved an R-squared value of 0.546 and an overall p-value of 0.00. These metrics suffice for the present inferential modelling but are lower than the standard required for predictive modelling which would require at least an R-squared of 0.8.
+2. There is a high number of pumps with zero static head, the majority of which are non-functional. It is not possible to conclude whether the pumps are actually faulty or they are in good condition but the wells have run dry.
 
-I did not have data about the profitability per sale. Therefore, I could not ascertain whether the distribution of mean sale price or the sales volume correlates with profitability.
-Moreover, buildings of better quality (higher grade) cost more to build per unit of measure and therefore, it could be possible that their profitability is not as high as lower-grade houses.
+3. Tuning the Machine Learning models was computationally intensive and some of them took a couple of hours to execute. Therefore, I could not tune combinations of all possible parameters in due time.
 
-I did not have data about proximity to amenities such as schools, transport infrastructure, and so on, and therefore, I could not determine how they would affect sales performance.
+4. The target classes were highly imbalanced and oversampling the minority class did not improve prediction scores.
 
-The data is not augmented with data about enabling factors such as the state of the economy in the County and the prevailing interest rates.
+## RECOMMENDATIONS FOR FUTURE RESEARCH AND MACHINE LEARNING MODELLING
+1. Finding out more information about the high count of zero values in the population, GPS height, total static head, and construction year columns may lead to better analysis, prediction, and recommendations.
 
-## RECOMMENDATIONS FOR FUTURE RESEARCH
+2. Finding out if there is more data that can balance the target classes. The current classes are imbalanced with the most frequent class comprising 37.2% of the data while the least class comprises only 4.42%. This affected the prediction score of the least class compared to the other classes. Availability of more data that can balance the classes would realize much better prediction scores.
 
-Future studies should get data about profitability of the house sales, so as to find out the relationship between sales performance and profitability. This would provde a real estate agency with more solid advice about sales performance.
-
-Future studies should also find out proximity of amenities such as schools, and transport infrastructure. These could be confounding variables that could have skewed the sales performance. Also, the current report does not help a buyer to know if a house of their choice will afford them proximity to these important amenities.
-
-Augmenting the dataset with data about more enabling factors such as the state of the economy in County and the interest rates. This would enable a seller to know the best times to sell and when not to sell. It would also inform a buyer about the best times to buy or take up mortgage.
+3. The use of a more robust computer or cloud server would enable tuning to be done for all parameters of the different classifier models.
 
 ## FOR MORE INFORMATION
-
 For further analysis and the highlights, kindly visit the following:
-1. My Jupyter notebook file titled king_county_house_sales.ipynb in this repository.
+1. My Jupyter notebook file titled student.ipynb in this repository.
 2. My presentation pdf in this repository. Kindly, if the pdf does not open the first time, please reload it and it will be rendered.
-3. My presentation webpage at this link [https://arcg.is/9LDnb](https://arcg.is/9LDnb) 
 
