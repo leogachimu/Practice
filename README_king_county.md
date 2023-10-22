@@ -162,6 +162,10 @@ From the distribution of pump functionality class for each class of a categorica
 A notable deviation from this trend is the never-pay class of the payment-type category, where non-functional pumps are more than the other classes of pumps.
 
 ### 3. Predictive Modelling Results
+
+<img width="327" alt="performance_scores_of_different_machine_learning_models" src="https://github.com/leogachimu/Practice/assets/122081776/5714beec-b010-46f5-9001-9af840c75df6">
+
+
 From the predictive section, I conclude that it's possible to correctly predict the condition of a pump given the data features from the Ministry of Water in Tanzania.
 
 The XGBoost model is the best for predicting whether a pump is functional, functional-needs-repair or non-functional given the different data features provided. It has an **accuracy score of 0.800 (80%)**, an **F1-score of 0.788**, a **precision of 0.797**, and a **recall of 0.800**. Even though the Random Forest model has slightly higher scores, the train scores show that it is overfitting the data while the XGBoost is a good fit (not underfitting or overfitting).
