@@ -42,52 +42,68 @@ The above cost is too high for a developing country, and thus, the country can o
 I intend to partner with the Government of Tanzania in solving the clean and safe water crisis.
 
 ## BUSINESS OBJECTIVES
-To complete this project, my main business objectives will be the following:
->To build a data analytics model for Team Howlett Real Estate Agents, a real estate agency that helps homeowners buy and/or sell homes in King County, Washington.<br>
+My main objectives in this project will be:
 
->To develop a model that will help in identifying the set of attributes that will realize the best value to a home buyer and optimal returns to the home seller.<br>
-
->To provide insight to homeowners and buyers about:<br>
-i.) How weather seasons may affect the sales volume and mean sale price of homes in King County.<br>
-ii.) How the grade of a house may affect the sales volume and mean sale price of homes in King County.<br>
-iii.) How the number of bedrooms affect the sales volume and mean sale price of homes in King County.<br>
-
->To find out whether there is a variation in sales volume and mean sale prices across different locations in King County.
+1. To build a Machine Learning classifier that will predict the condition of a water well (functional, functional-but-needs-repair, and non-functional), using data such as the kind of pump, when it was installed, the installer, the region, and so on.
+2. To help the Government of Tanzania find patterns in functional and non-functional wells, to help influence how new wells are built.
+3. To find the most important factors that influence whether a pump is functional, functional-but-needs-repair, or non-functional. This can guide the management of new and existing water wells.
+4. To find out the geographical distribution of the three classes of water pumps, to help inform which regions need more attention in terms of repair, maintenance, and replacement.
 
 ## STUDY QUESTIONS
-1. What is the relationship between weather season and sales performance?<br>
-2. Which is the best weather season to buy a house?<br>
-3. Which are the best performing house grades?<br>
-4. What is the optimal range of a house grade for different budgets?<br>
-5. What is the relationship between number of bedrooms and sales performance?<br>
-6. What is the optimal range of bedrooms for different budgets?<br>
-7. Which set of variables has the highest influence on the sale price of a house?<br>
-8. How are the house prices and house sale volumes distributed around the county?
+1. Is it possible to correctly predict whether a pump is functional, functional-but-needs-repair, or non-functional given data such as the kind of pump, when it was installed, the installer, the region, and so on?
+2. Which are the 20 most important factors that influence whether a pump is functional, functional-but-needs-repair, or non-functional?
+3. What is the geographical distribution of pumps in terms of the three classes of functional, functional-but-needs-repair, and non-functional?
+4. Is there a relationship between a pump's total static head and its reliability?
+5. What is the relationship between installation year and a pump's functionality?
+6. What is the relationship between population and a pump's functionality?
+
 ## DATA UNDERSTANDING
-The dataset kc_house_data.csv, has **21,597 rows** and **21 columns**. Below is a description of the variables in the dataset.
+The relevant datasets for have been provided on the Driven Data website which is hosting a competition for this project.
+Data for the dependent variable in the test dataset has not been provided, therefore, I will make use of Training set values and Training set labels datasets.
+**Training Data Features**
+The training dataset contains 59,400 waterpoints in Tanzania and the following 39 features:
+
 | Column           | Description                                                                                       |
 |------------------|---------------------------------------------------------------------------------------------------|
-| **id**               | Identification for a house                                                                        |
-| date             | Date house was sold                                                                               |
-| price            | Sale price for a house, which is the target variable                                             |
-| bedrooms         | Number of bedrooms                                                                                |
-| bathrooms        | Number of bathrooms                                                                               |
-| sqft_living      | Size of living area in square feet                                                                |
-| sqft_lot         | Size of the lot in square feet                                                                    |
-| floors           | Total number of floors (levels) in the house                                                      |
-| waterfront       | '1' if the property has a view to a waterfront, '0' if not                                       |
-| view             | A rating of Fair, Average, Good, Excellent depending on the view of the property                  |
-| condition        | Overall condition of the house                                                                    |
-| grade            | An index from 1 to 13 indicating the quality level of construction and design                     |
-| sqft_above       | Square footage of the house excluding the basement                                               |
-| sqft_basement    | Square footage of the basement                                                                    |
-| yr_built         | Year the house was built                                                                          |
-| yr_renovated     | Year when the house was last renovated. '0' if it has never been renovated                       |
-| zipcode          | 5-digit zip code of the house                                                                     |
-| lat              | Latitude coordinate                                                                               |
-| long             | Longitude coordinate                                                                              |
-| sqft_living15    | Average size of interior living space of the 15 closest houses, in square feet                    |
-| sqft_lot15       | Average size of the land lots for the 15 closest houses, in square feet  
+| amount_tsh       | Total static head (amount water available to waterpoint)                                      |
+| date_recorded    | Date on which the row was recorded                                                       |
+| price            | Individual or organization that funded installation of the well                                   |
+| gps_height       | The altitude at which the water pump is located                                                   |
+| installer        | Individual or organization that installed the well                                                |
+| longitude        | Longitude coordinates of the water point                                                          |
+| latitude         | Latitude coordinates of the water point                                                           |
+| wpt_name         | Name of the waterpoint if there is one                                                            |
+| num_private      | Information about this feature is unavailable                                                     |
+| basin            | Name of the geographic water basin                  |
+| subvillage       | Geographic location                                                                    |
+| region           | Geographic location                     |
+| region_code      | Coded geographic location                                              |
+| district_code    | Coded geographic location                                                                    |
+| lga              | Geographic location                                                                          |
+| ward             | Geographic location                       |
+| population       | Population around the well                                                                     |
+| public_meeting   | Boolean data whether public meeting for the water pump was conducted                              |
+| recorded_by      | Name of agency which recorded the water pump data                                                 |
+| scheme_management| Name of scheme that manages the waterpoint                    |
+| scheme_name      | Name of scheme under which the water point was established                                       |
+| permit           | Boolean data describing whether the water point has permit available or not                  |
+| contruction_year | Year in which the water point was constructed                                             |
+| extraction_type  | The kind of extraction the waterpoint uses                       |
+| extraction_type_group        | The kind of extraction the waterpoint uses                               |
+| extraction_type_class      | The kind of extraction the waterpoint uses                                            |
+| management       | Name of organization/authority that manages the water point                    |
+| managememt_group | Category of organization/authority that manages the water point                       |
+| payment          | Describes how residents pay for water                                       |
+| payment_type     | Describes how residents pay for water                  |
+| water_quality    | The quality of water                                                                    |
+| quality_group    | The quality of water                     |
+| quantity         | The quantity of water                                               |
+| quantity_group   | The quantity of water                                                                    |
+| source           | The source of water                                                                          |
+| source_type      | The source of water                       |
+| source_class     | The source of water                                                                     |
+| waterpoint_type  | The nature of water point                           |
+| waterpoint_type_group  | The nature of water point                        |  
 
 ## METHODOLOGY
 Execution of the project involved the following:
@@ -95,26 +111,15 @@ Execution of the project involved the following:
 ### Data Understanding and Cleaning
 I explored the datasets to understand their schema, size, data types, and examine the presence of invalid or inconsistent data such as missing values, duplicates, placeholders, and outliers.
 
-### Data Transformation
-I transformed the data into DataFrames using the Pandas library in Python and performed different transformations and analyses to suit.
-
-### Feature Engineering
-Based on the avaliable variables, I engineered new variables that would better suit my analysis and modelling.
-
 ### Data Analysis 
-I analyzed the relationship between the most influential predictor variables and price, which is the response variable. 
-
-### Hypothesis Testing
-I tested the statistical significance of the various findings from my analysis.
-
-### Multiple Regression Modelling
-I built the best-fitting model for inferring the relationship between predictor variables and the response variable.
+I analyzed the relationship between the continuous and categorical predictor variables and pump condition, which is the response variable.
 
 ### Data Visualization
-I used various visualization methods such as bar plots, histograms, and scatter plots to display my findings and facilitate interpretation.
+I used various visualization methods such as bar plots, histograms, scatter plots, and Folium maps to display descriptive statistics and facilitate interpretation.
 
-### Data Interpretation
-I interpreted the various findings and visualizations to build a recommendation for a real estate agency.
+### Machine Learning Modelling
+I built different machine learning models and evaluated their performance to pick the best based on performance scores and whether it was fitting the data appropriately (without underfitting or overfitting).  
+
 
 ## THE FINDINGS
 ### 1. The relationship between weather season and sales performance
