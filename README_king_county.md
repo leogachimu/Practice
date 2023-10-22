@@ -1,12 +1,12 @@
-# Phase 2 Project
+# Phase 3 Project
 
-# BUSINESS ANALYSIS OF HOUSE SALES IN KING COUNTY, WASHINGTON 
+# TANZANIA WATER WELL CLASSIFICATION PROJECT
 ## AUTHOR: 
 *1. Leonard Gachimu*<br>
 
 Flatiron School Data Science Program
 
-Due date: 11/09/2023
+Due date: 23/10/2023
 
 Technical Mentor: **Stella Waithera**
 
@@ -14,30 +14,32 @@ Technical Mentor: **Stella Waithera**
 
 ## PROJECT OVERVIEW
 
-This project seeks build a multiple linear regression model for a real estate agency that will help homeowners buy and/or sell homes in King County, Washington.
+This project seeks to build a Machine Learning classifier algorithm that can predict the condition of a water well (functional, functional-but-needs-repair, and non-functional), using data such as the kind of pump, when it was installed, the installer, the region, and so on.
+
+## BUSINESS UNDERSTANDING
+>Tanzania is a country in East Africa. The World Bank estimates its population at [65 million as of 2022](https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tza.pdf) and its land size is about 947,303 km2 (365,756 sq mi).
+
+>The country comprises many lakes, national parks, and in fact, [Africa's highest point, Mount Kilimanjaro (5,895 m or 19,341 ft)](https://en.wikipedia.org/wiki/Geography_of_Tanzania).
+
+>However, like many other sub-Saharan African countries, Tanzania is a developing country struggling to provide adequate clean water for its bulging population that is [growing at 3% per annum](https://www.worldometers.info/world-population/tanzania-population/).
+
+>[Extreme poverty rate was 44% in 2022](https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tza.pdf) which means an increasing population is not affording the basic quality of life.
+### GROUND WATER SITUATION IN TANZANIA
+>Ground water development has concentrated mainly on shallow wells for domestic purposes over a wide part of the country. [Up to 90% of pumps and other equipment](https://gw-africa.iwmi.org/wp-content/uploads/sites/23/2018/10/Country_Report-Tanzania.pdf) used for water extraction fail due to a lack of repair and maintenance.
+
+>Various actors, such as the national and regional governments, religious organizations, and foreign cooperation agencies have established many water points around the country but they are hardly enough. What is worse is that a significant number of the water points are in need of repair while others have failed altogether.
 
 ## BUSINESS PROBLEM
 
-> King County, being the home of Seattle, the most advanced and populous city in Washington and the 13th most populous in the USA, has a competitive real estate industry.
+With the ongoing global climate change, [water scarcity has become an increasing problem in Tanzania](https://en.wikipedia.org/wiki/Geography_of_Tanzania), as some regions experience either intense and destructive rainfall or long dry spells.
 
->As such, there is a complex and dynamic relationship among many factors that affect the market value of real estate property. These factors include the weather season, the location of the property, the grade of the house, the presence of a scenic view, the number of floors, the age of the house, various dimensions such as the size of the interior living space, and the size of the lot.
+According to the World Bank, [only 61% of households in Tanzania currently have access to a basic water-supply](https://www.worldbank.org/en/country/tanzania/publication/tanzania-economic-update-universal-access-to-water-and-sanitation-could-transform-social-and-economic-development), 32% have access to basic sanitation, and 48% have access to basic hygiene. About 31,000 deaths each year emanate from lack of or poor quality water and sanitation, which is costly to the economy.
 
->For a real estate firm, the challenge is to make informed pricing decisions that will account for all the complex interrelated factors. This can lead them to **misadvise home buyers** and sellers as well as **unnecessary loss of business** opportunities and reputation.
+The [average water project in Tanzania about USD 6,000 to USD 8,000](https://water4.org/solution/tanzania/) for a hand pump water point, impacting 600-700 lives per well. For mechanized systems, the cost is atleast USD 12,000.
 
->My project seeks to help [Team Howlett Real Estate Agents](https://www.teamhowlett.com/), a real estate agency in King County, make more informed and data-driven pricing strategies for homes in King County.
-## BUSINESS UNDERSTANDING
-**Specific Factors that Influence the Price of a Home in King County:**
-1.	Location-specific conditions include traffic, freeway access, noise, crime, sun exposure, views, parking, neighboring homes, vacant lots, access to quality schools, parks, shops, restaurants.
-2.	Condition - the overall condition of the house affects its market value.
-3.	Grade is a classification by construction quality which refers to the types of materials used and the quality of workmanship. It is regulated by the King County Local government.
-4.	Various dimensions in square feet, such as the size of the interior living space, the lot, the basement, as well the average dimension of neighboring houses.
-5.	The number of bedrooms and bathrooms.
-6.	Presence of a scenic view.
-7.	The age of the house.
-8.	If the house is old, whether it has ever been renovated.
+The above cost is too high for a developing country, and thus, the country can only provide water to more millions of its people by following effective installation methods and proper maintenance of existing water projects.
 
-## Introducing [Team Howlett Real Estate Agents](https://www.teamhowlett.com/)
-This is a real estate agency in King County, Washington, that guides buyer and sellers through the entire real estate transaction, from start to finish.
+I intend to partner with the Government of Tanzania in solving the clean and safe water crisis.
 
 ## BUSINESS OBJECTIVES
 To complete this project, my main business objectives will be the following:
