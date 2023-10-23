@@ -252,4 +252,5 @@ The XGBoost model is the best for predicting whether a pump is functional, funct
 For further analysis and the highlights, kindly visit the following:
 1. My Jupyter notebook file titled student.ipynb in this repository.
 2. My presentation pdf in this repository. Kindly, if the pdf does not open the first time, please reload it and it will be rendered.
+3. Alternatively, you can visit my presentation page at this link [https://arcg.is/9LDnb](https://storymaps.arcgis.com/stories/c47175e5d59247498a819c67d2508252/)
 
