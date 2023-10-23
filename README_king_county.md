@@ -215,7 +215,7 @@ vii.) payment type<br>
 4. The density of functional pumps is higher among the newest pumps while non-functional pumps are higher among the older pumps, from around **1965 to 1990.**<br>
 5. From the geographical map of pumps, we observe the following:<br>
     a.) There is a higher density of functional pumps in the Northern regions of Mwanza and Shinyanga, as well as the Southern region of Njombe.<br>
-    b.) There is a higher density of functional-needs-repair pumps in the Northern regions of Bukoba and Arusha, as well as the Western region of Kigoma.
+    b.) There is a higher density of functional-needs-repair pumps in the Northern regions of Bukoba and Arusha, as well as the Western region of Kigoma.<br>
     c.) There is a higher density of non-functional pumps in the Central region of Dodoma and the South West region of Mtwara.<br>
 6. Some classes of categorical variables are more frequent than others. For example, Iringa and Kilimanjaro regions have the highest number of pumps. The never-pay payment scheme is the most popular and over **40,000 out of 59,400 wells have soft water quality**.<br>
 7. Functional pumps are the most frequent among almost all classes of predictor but a notable deviation from this trend is the **never-pay class** of the payment-type category, where non-functional pumps are more than the other classes of pumps.<br>
