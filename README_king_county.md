@@ -172,8 +172,8 @@ The XGBoost model is the best for predicting whether a pump is functional, funct
 **Classification Report of XGBoost Model:**
 
                             precision    recall  f1-score   support
-             functional       0.78      0.91      0.84      5465
-functional needs repair       0.62      0.21      0.31       662
+             functional       0.78      0.91      0.84      5465<br>
+functional needs repair       0.62      0.21      0.31       662<br>
          non functional       0.85      0.74      0.79      3920
 
                accuracy                           0.80     10047
