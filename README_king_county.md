@@ -122,8 +122,7 @@ I built different machine learning models and evaluated their performance to pic
 
 ## THE FINDINGS
 ### 1. Relationship Between Pump Functionality and Continuous Variables
-
-![density_of_target_class_vs_continuous_features](https://github.com/leogachimu/Practice/assets/122081776/4b48c481-969e-4336-9e7a-a6c4ca6e965a)
+![density_of_target_class_vs_continuous_features](https://github.com/leogachimu/Practice/assets/122081776/6ecfe0b0-013d-434a-9348-20c4cce3a4ca)
 
 i.) For the total static head feature (amount_tsh), waterpoints with zero static head have the highest density of pumps overall. Also, among the three pump classes at this point, non-functional pumps have the highest density followed by functional pumps. Functional-needs-repair pumps are the least. Functional-needs-repair pumps are the least. However, the dataset has a high number (59.2%) of pumps with zero static head and there is no information about the high occurrence.<br>
 
@@ -150,12 +149,10 @@ iii.) There is a higher density of non-functional pumps in the Central region of
 From the box plot of total_static_head vs. pump condition, we can see that the pumps having tsh above approx.125,000 are all functional. Therefore, the higher the tsh the higher the probabilty of a pump being functional.
 
 ### 2. Relationship Between Pump Functionality and Categorical Variables
-
-![distribution_of_categorical_features1](https://github.com/leogachimu/Practice/assets/122081776/3e26580e-d44d-48fc-9c32-406f06b51165)
+![histograms_of_categorical_features](https://github.com/leogachimu/Practice/assets/122081776/a0fad8b9-f2ae-4c6f-a484-99355d513346)
 
 From the different visualizations of categorical variables, we notice that some classes of categories are more popular than others. For example, Iringa and Kilimanjaro regions have the highest number of pumps. The never-pay payment scheme is most popular and over 40,000 out of 59,400 wells have soft water quality.
-
-![distribution_of_target_class_vs_categorical_features](https://github.com/leogachimu/Practice/assets/122081776/1e2f2e31-b88a-4c73-befc-d9b4e5637991)
+![distribution_of_target_class_vs_categorical_features](https://github.com/leogachimu/Practice/assets/122081776/40e5ed37-96da-4e7c-9799-9a70b3b2bedf)
 
 From the distribution of pump functionality class for each class of a categorical variable, we notice that the functional pumps are more frequent than functional-needs-repair and non-functional pumps. 
 
