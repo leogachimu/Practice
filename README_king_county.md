@@ -10,7 +10,7 @@ Due date: 23/10/2023
 
 Technical Mentor: **Stella Waithera**
 
-![Forbes](https://imageio.forbes.com/specials-images/imageserve/62437975bb1b55afcd4ab6ab/real-estate-concept/960x0.jpg)
+![Maasai women fetching water at a well in Tanzania](https://winrock.org/wp-content/uploads/2016/11/ARStory-Maasai.jpg)
 
 ## PROJECT OVERVIEW
 
@@ -165,12 +165,12 @@ A notable deviation from this trend is the never-pay class of the payment-type c
 
 <img width="327" alt="performance_scores_of_different_machine_learning_models" src="https://github.com/leogachimu/Practice/assets/122081776/5714beec-b010-46f5-9001-9af840c75df6">
 
-
 From the predictive section, I conclude that it's possible to correctly predict the condition of a pump given the data features from the Ministry of Water in Tanzania.
 
 The XGBoost model is the best for predicting whether a pump is functional, functional-needs-repair or non-functional given the different data features provided. It has an **accuracy score of 0.800 (80%)**, an **F1-score of 0.788**, a **precision of 0.797**, and a **recall of 0.800**. Even though the Random Forest model has slightly higher scores, the train scores show that it is overfitting the data while the XGBoost is a good fit (not underfitting or overfitting).
 
 **Classification Report of XGBoost Model:**
+
                             precision    recall  f1-score   support
              functional       0.78      0.91      0.84      5465
 functional needs repair       0.62      0.21      0.31       662
@@ -207,22 +207,22 @@ vi.) The installer<br>
 vii.) payment type<br>
 
 ## CONCLUSION
-i.) Waterpoints with zero static head have the highest density of non-functional pumps but I could not determine the reason for this fact.<br>
-ii.) Pumps having total static head (tsh) above approx. 125,000 are all functional. This could be an indicator that the higher the tsh, the higher the likelihood of a pump lasting longer.<br>
-iii.) Waterpoints located in areas with zero population have the highest density of non-functional pumps. However, there is no information about whether the wells have been abandoned or the population has relocated.<br>
-iv.) The density of functional pumps is higher among the newest pumps while non-functional pumps are higher among the older pumps, from around **1965 to 1990.**<br>
-v.) From the geographical map of pumps, we observe the following:<br>
+1. Waterpoints with zero static head have the highest density of non-functional pumps but I could not determine the reason for this fact.<br>
+2. Pumps having total static head (tsh) above approx. 125,000 are all functional. This could be an indicator that the higher the tsh, the higher the likelihood of a pump lasting longer.<br>
+3. Waterpoints located in areas with zero population have the highest density of non-functional pumps. However, there is no information about whether the wells have been abandoned or the population has relocated.<br>
+4. The density of functional pumps is higher among the newest pumps while non-functional pumps are higher among the older pumps, from around **1965 to 1990.**<br>
+5. From the geographical map of pumps, we observe the following:<br>
     a.) There is a higher density of functional pumps in the Northern regions of Mwanza and Shinyanga, as well as the Southern region of Njombe.<br>
     b.) There is a higher density of functional-needs-repair pumps in the Northern regions of Bukoba and Arusha, as well as the Western region of Kigoma.
     c.) There is a higher density of non-functional pumps in the Central region of Dodoma and the South West region of Mtwara.<br>
-vi.) Some classes of categorical variables are more frequent than others. For example, Iringa and Kilimanjaro regions have the highest number of pumps. The never-pay payment scheme is the most popular and over 40,000 out of 59,400 wells have soft water quality.<br>
-vii.) Functional pumps are the most frequent among almost all classes of predictor but a notable deviation from this trend is the **never-pay class** of the payment-type category, where non-functional pumps are more than the other classes of pumps.<br>
-viii.) From the predictive section, I conclude that it's possible to correctly **predict at least 80% accuracy**, the condition of a pump given the data features from the Ministry of Water in Tanzania.<br>
+6. Some classes of categorical variables are more frequent than others. For example, Iringa and Kilimanjaro regions have the highest number of pumps. The never-pay payment scheme is the most popular and over **40,000 out of 59,400 wells have soft water quality**.<br>
+7. Functional pumps are the most frequent among almost all classes of predictor but a notable deviation from this trend is the **never-pay class** of the payment-type category, where non-functional pumps are more than the other classes of pumps.<br>
+8. From the predictive section, I conclude that it's possible to correctly **predict at least 80% accuracy**, the condition of a pump given the data features from the Ministry of Water in Tanzania.<br>
 
 The XGBoost model is the best for predicting whether a pump is functional, functional-needs-repair or non-functional given the different data features provided. It has an **accuracy score of 0.800 (80%)**, an **F1-score of 0.788**, a **precision of 0.797**, and a **recall of 0.800**. Even though the Random Forest model has slightly higher scores, the train scores show that it is overfitting the data while the XGBoost is a good fit (not underfitting or overfitting).
 
 ## RECOMMENDATIONS TO THE GOVERNMENT OF TANZANIA
-1. I advise the Goverment of Tanzania to apply my final model in predicting the condition of well pumps across Tanzania. It will help them to correctly predict the actual condition of each pump at at least 80% success rate.
+1. I advise the Goverment of Tanzania to apply my final model in predicting the condition of well pumps across Tanzania. It will help them to correctly predict the actual condition of each pump at at least **80% success rate**.
 
 2. The government needs to give more attention to the Northern regions of Bukoba and Arusha where there is the highest density of functional-needs-repair pumps, as well as the regions of Dodoma and Mtwara, where there is the highest density of non-functional pumps.
 
