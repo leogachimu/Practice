@@ -180,14 +180,7 @@ functional needs repair       0.62      0.21      0.31       662
                accuracy                           0.80     10047
               macro avg       0.75      0.62      0.65     10047
            weighted avg       0.80      0.80      0.79     10047
-
-                            precision    recall  f1-score   support
-             functional       0.78      0.91      0.84      5465
-functional needs repair       0.62      0.21      0.31       662
-         non functional       0.85      0.74      0.79      3920
-               accuracy                           0.80     10047
-              macro avg       0.75      0.62      0.65     10047
-           weighted avg       0.80      0.80      0.79     10047
+           
 **Confusion Matrix**
 
 ![Confusion_matrix_for_xgbboost](https://github.com/leogachimu/Practice/assets/122081776/1373ca61-7030-41bf-99c6-a9de7bf15920)
